@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite'
+import pages from 'vite-plugin-pages'
 import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), pages({
+    dirs: 'src/pages',
+    extensions: ['tsx'],
+  }),],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

@@ -3,7 +3,7 @@ import './index.module.scss';
 function index() {
   return (
     <>
-      <p>dskdlkfldfgf</p>
+      <p>index</p>
     </>
   );
 }
