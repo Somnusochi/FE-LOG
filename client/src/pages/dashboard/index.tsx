@@ -1,11 +1,17 @@
-import './index.module.scss';
+import styles from './index.module.scss';
+const Index: React.FC = () => {
+  const navigate = useNavigate();
 
-function index() {
+  const handleClick = () => {
+    navigate('/index');
+  };
+
   return (
     <>
-      <p>dashboard</p>
+      <nav></nav>
+      <p onClick={handleClick}>dashboard</p>
     </>
   );
-}
+};
 
-export default index;
+export default Index;
